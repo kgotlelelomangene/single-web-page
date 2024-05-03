@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.container {
+    width: 100%;
+    height: 150%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.child {
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.child1 {
+    background-image: url('./images/back-image1.png');
+
+}
+
+.child2 {
+    background-image: url('./images/back-image2.jpg');
+}
+
+.child3 {
+    background-image: url('./images/back-image3.jpg');
+}
+
+.child1-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1%;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
+    width: 55px;
+    height: 50px;
+}
+
+.child1-header a {
+    color: white;
+}
+
+.child1-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1%;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.child1-footer p em {
+    color: rgb(9, 16, 67);
+    font-style: normal;
+}
+
+.child1-footer a {
+    color: rgb(9, 16, 67);
+}
+
+.child1 a {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.child2-content {
+    position: absolute;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: sans-serif;
+}
+
+.child2-content-row {
+    display: flex;
+    align-items: center;
+
+}
+
+h1 {
+    color: gray;
+    font-size: 130px;
+}
+
+h3 {
+    color: rgb(9, 16, 67);
+
+}
+
+.child2-content p {
+    padding-left: 7%;
+}
+
+.child2-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1%;
+    text-align: center;
+    background-color: rgba(46, 57, 82, 0.7);
+    ;
+}
+
+.child2-footer img {
+    width: 100px;
+    height: 70px;
+}
+
+.child2-footer .slider-dot img {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-width: 0;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.child2-footer .slider-dot .active-slide {
+    background-color: white;
+}
+
+.child3-content {
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+.child3-content p {
+    padding-left: 3%;
+
+}
+
+.nav {
+    padding-left: 10%;
+    background-color: rgb(9, 16, 67);
+}
+
+
+nav {
+    border: 1px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.active,
+.nav a:hover {
+    background-color: gray;
+    color: rgb(9, 16, 67);
+    text-decoration: underline;
+}
+
+.card {
+    margin-left: 15%;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.7;
+    width: fit-content;
+}
+
+.card h3 {
+    font-weight: bold;
+}
+
+td {
+    padding-top: 20px;
+    padding-right: 25px;
+
+}
+
+.child3-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1%;
+    padding-left: 15%;
+    background-color: rgb(9, 16, 67);
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15%;
+
+}
+
+.child3-footer p {
+    text-wrap: nowrap;
+
+}
+
+@media screen and (max-width: 995px) {
+
+    html,
+    body,
+    .container {
+        height: 120%;
+    }
+}
+
+@media screen and (max-width: 995px) {
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h3 {
+        font-size: smaller;
+
+    }
+
+    p {
+        font-size: smaller;
+    }
+
+    .child1-footer,
+    .child1-header,
+    .child3-footer {
+        font-size: smaller;
+        height: 25px;
+
+    }
+
+    .child2-footer {
+        height: fit-content;
+    }
+
+    .child2-footer img {
+        width: 85px;
+        height: 60px;
+    }
+
+    .child2-footer .slider-dot img {
+        width: 7px;
+        height: 7px;
+    }
+
+    nav {
+        padding: 3px;
+    }
+
+    a {
+        font-size: x-small;
+        padding: 5px;
+    }
+
+    .card {
+
+        padding: 15px;
+        align-self: center;
+    }
+
+    td {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: x-small;
+
+    }
+
+    p {
+        font-size: x-small;
+    }
+
+    .child1-footer,
+    .child1-header,
+    .child3-footer {
+        font-size: x-small;
+    }
+
+    .child2-footer img {
+        width: 75px;
+        height: 50px;
+    }
+
+    nav {
+        padding: 2px;
+    }
+
+    a {
+        font-size: xx-small;
+        padding: 5px;
+    }
+
+    .card {
+
+        padding: 10px;
+    }
+
+    td {
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: xx-small;
+
+    }
+
+    p {
+        font-size: 5px;
+    }
+
+    .child1-footer,
+    .child1-header,
+    .child3-footer {
+        font-size: 7px;
+        padding-left: 10%;
+
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 40px;
+    }
+
+    .child2-footer img {
+        width: 50px;
+        height: 35px;
+    }
+
+    .child2-footer .slider-dot img {
+        width: 5px;
+        height: 5px;
+    }
+
+    nav {
+        padding: 1px;
+    }
+
+    a {
+        font-size: xx-small;
+        padding: 4px;
+    }
+
+    .card {
+        padding: 5px;
+    }
+
+    td {
+        font-size: xx-small;
+        padding-top: 15px;
+        padding-right: 20px;
+
+    }
+
+}
