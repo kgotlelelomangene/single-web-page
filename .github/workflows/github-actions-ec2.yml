@@ -8,7 +8,7 @@ on:
 jobs:
   Deploy:
     name: Deploy to EC2 on main pushes
-    runs-on: linux
+    runs-on: Linux/UNIX
     
     steps:
       - uses: actions/checkout@v2 
