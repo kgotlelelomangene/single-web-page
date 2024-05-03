@@ -1,0 +1,38 @@
+name: Deploy-to-EC2
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  Deploy:
+    name: Deploy to EC2 on main pushes
+    runs-on: linux
+    
+    steps:
+      - uses: actions/checkout@v2 
+      - name: checkout the files
+
+      - name: Deploy to the server
+        uses: easingthemes/ssh-deploy@main
+        env:
+            SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+            REMOTE_HOST: ${{secrets.HOST_DNS}}
+            REMOTE_USER: ${{secrets.USERNAME}}
+            TARGET: ${{secrets.TARGET_DIR}}
+      
+      - name: Execute remote ssh commands with ssh key
+        uses: appleboy/ssh-action@main
+        with:
+          host: ${{secrets.HOST_DNS}}
+          username: ${{secrets.USERNAME}}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo apt-get -y update
+            sudo apt-get install -y apache2
+            sudo systemctl start apache2
+            sudo systemctl enable apache2
+            cd home
+            sudo mv * /var/www/html
+            
