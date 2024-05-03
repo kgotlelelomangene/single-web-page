@@ -8,11 +8,11 @@ on:
 jobs:
   Deploy:
     name: Deploy to EC2 on main pushes
-    runs-on: Linux/UNIX
+    runs-on: Amazon Linux
     
     steps:
-      - uses: actions/checkout@v2 
       - name: checkout the files
+        uses: actions/checkout@v2 
 
       - name: Deploy to the server
         uses: easingthemes/ssh-deploy@main
