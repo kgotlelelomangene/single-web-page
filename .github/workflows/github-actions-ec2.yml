@@ -8,7 +8,7 @@ on:
 jobs:
   Deploy:
     name: Deploy to EC2 on main pushes
-    runs-on: Amazon Linux
+    runs-on: Ubuntu
     
     steps:
       - name: checkout the files
