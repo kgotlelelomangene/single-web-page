@@ -7,7 +7,7 @@ on:
 
 jobs:
   Deploy:
-    name: Deploy to EC2 on main pushes
+    name: Deploy to EC2 when there is main pushes
     runs-on: ubuntu-latest
     
     steps:
